@@ -1,5 +1,4 @@
 private
 computeContentLength
-
-	self string ifNil: [ ^ self ].
+	self string isNil ifTrue: [ ^ self ].
 	contentLength := self encoder encodedByteCountForString: string

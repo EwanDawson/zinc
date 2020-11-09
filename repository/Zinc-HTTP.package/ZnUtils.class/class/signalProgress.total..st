@@ -1,6 +1,6 @@
 streaming
 signalProgress: amount total: total
-	(ZnCurrentOptions at: #signalProgress)
+	ZnSignalProgress enabled
 		ifTrue: [ 
 			total 
 				ifNil: [ 

@@ -1,4 +1,5 @@
 accessing
 scheme: anObject
-
-	anObject ifNil: [ scheme := nil ] ifNotNil: [ scheme := anObject asLowercase asSymbol ]
+	anObject isNil
+		ifTrue: [ scheme := nil ]
+		ifFalse: [ scheme := anObject asLowercase asSymbol ]

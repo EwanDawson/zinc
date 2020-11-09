@@ -1,4 +1,5 @@
 testing
 isBinary
-
-	^ binary ifNil: [ stream isBinary ] ifNotNil: [ binary ]
+	^ binary isNil
+		ifTrue: [ stream isBinary ]
+		ifFalse: [ binary ]

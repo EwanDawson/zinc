@@ -1,3 +1,4 @@
 open/close
-close
-	stream close
+close 
+
+	^stream close

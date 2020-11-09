@@ -1,4 +1,4 @@
 private
 headers
-	headers ifNil: [ headers := ZnMultiValueDictionary new ].
+	headers isNil ifTrue: [ headers := ZnMultiValueDictionary new ].
 	^ headers

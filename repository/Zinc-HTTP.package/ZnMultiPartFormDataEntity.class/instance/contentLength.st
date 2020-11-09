@@ -1,5 +1,4 @@
 accessing
 contentLength
-
-	contentLength ifNil: [ self computeRepresentation ].
+	contentLength isNil ifTrue: [ self computeRepresentation ].
 	^ contentLength

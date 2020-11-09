@@ -1,5 +1,4 @@
 accessing
 headers
-
-	headers ifNil: [ headers := ZnHeaders new ].
+	headers isNil ifTrue: [ headers := ZnHeaders new ].
 	^ headers

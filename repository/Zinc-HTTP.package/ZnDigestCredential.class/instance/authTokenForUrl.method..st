@@ -18,11 +18,10 @@ authTokenForUrl: urlObject method: method
 		nextPutAll: 'response="';
 		nextPutAll: (self responseForUrl: urlObject method: method);
 		nextPutAll: '", '.
-	self opaque
-		ifNotNil: [:opaqueValue | 
+	self opaque isNil
+		ifFalse: [ 
 			result
 				nextPutAll: 'opaque="';
-				nextPutAll: opaqueValue;
-				nextPutAll: '"'
-			].
+				nextPutAll: self opaque;
+				nextPutAll: '"' ].
 	^ result contents
