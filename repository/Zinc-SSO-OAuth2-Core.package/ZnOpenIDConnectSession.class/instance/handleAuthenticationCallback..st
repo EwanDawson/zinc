@@ -12,7 +12,7 @@ handleAuthenticationCallback: aParameterDictionary
 			at: 'code' put: code ;
 			at: 'client_id' put: self consumerData key ;
 			at: 'client_secret' put: self consumerData secret ;
-			at: 'redirect_uri' put: self redirectUrl ;
+			at: 'redirect_uri' put: self redirectUrl asString;
 			at: 'grant_type' put: 'authorization_code' ;
 			yourself) ;
 		yourself.
@@ -22,8 +22,9 @@ handleAuthenticationCallback: aParameterDictionary
 		post.
 	tokenData := NeoJSONReader fromString: tokenResponse.
 		
-	self validateIdToken: (tokenData at: 'id_token').
-
+	idToken := tokenData at: 'id_token'.
+	self validateIdToken: idToken.
+	
 	accessToken := tokenData at: 'access_token'.
 	tokenType := tokenData at: 'token_type'.
 	refreshToken := tokenData at: 'refresh_token' ifAbsent: [ nil ].

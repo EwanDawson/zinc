@@ -5,6 +5,7 @@ ssoGoogleData: request
 	
 	googleSession := self googleSessionFor: request.
 	userData := googleSession getUserData.
+	userData at: #id_token put: (googleSession idToken).
 
 	html := self htmlPageTitled: 'Zinc SSO Google UserData' do: [ :stream | 
 		stream << '<h3>Google UserData</h3>'.

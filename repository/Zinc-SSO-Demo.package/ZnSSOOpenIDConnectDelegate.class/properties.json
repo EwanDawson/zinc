@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnDefaultServerDelegate",
+	"category" : "Zinc-SSO-Demo-Zinc-SSO-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"session"
+	],
+	"name" : "ZnSSOOpenIDConnectDelegate",
+	"type" : "normal"
+}

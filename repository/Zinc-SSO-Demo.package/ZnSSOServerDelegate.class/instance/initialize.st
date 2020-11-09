@@ -22,5 +22,6 @@ initialize
 		at: 'sso-dropbox-callback' put: #ssoDropboxCallback: ;
 		at: 'sso-dropbox-data' put: #ssoDropboxData: ;
 		at: 'sso-openid' put: #ssoOpenID: ;
-		at: 'sso-openid-callback' put: #ssoOpenIDCallback: 
+		at: 'sso-openid-callback' put: #ssoOpenIDCallback: ;
+		at: 'idp-callback' put: #ssoGoogleCallback:
 
