@@ -12,7 +12,7 @@ fromString: aString
 	parameters := SmallDictionary new.
 	parts do: [ :each | 
 		parameters
-			at: (each copyUpTo: $=) trimBoth asLowercase
+			at: (each copyUpTo: $=) trimBoth 
 			put: (each copyAfter: $=) trimBoth ].
 	^ self 
 		main: main

@@ -1,11 +1,17 @@
 tests
-testClose
-	| string result znstream |
-	string := 'abcčřž' , String cr.
-	result := String streamContents: [ :out |
-		znstream := ZnNewLineWriterStream on: (ZnBufferedWriteStream on: out).
-		znstream forLf.
-		znstream nextPutAll: string.
-		znstream close ].
+testClose 
+
+	| string fs fileReference znstream |
+
+	fs := FileSystem memory.
+	fileReference := fs / 'test.txt'.
+	string := String streamContents: [ :stream |
+		stream 
+			<< 'abcčřž';
+			cr ].
+	znstream := ZnNewLineWriterStream on: fileReference writeStream.
+	znstream forLf.
+	[ znstream nextPutAll: string ]
+		ensure: [ znstream close ].
 	string at: string size put: Character lf.
-	self assert: result equals: string.
+	self assert: fileReference contents equals: string.

@@ -4,11 +4,10 @@ printOn: stream
 		nextPutAll: self main;
 		nextPut: $/;
 		nextPutAll: self sub.
-	parameters ifNotNil: [ 
-		parameters
-				keysAndValuesDo: [ :key :value | 
-					stream
-						nextPut: $;;
-						nextPutAll: key;
-						nextPut: $=;
-						nextPutAll: value ] ]
+	parameters isNil ifFalse: [ 
+		parameters keysAndValuesDo: [ :key :value | 
+			stream
+				nextPut: $;;
+				nextPutAll: key;
+				nextPut: $=;
+				nextPutAll: value ] ]

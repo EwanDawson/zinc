@@ -1,4 +1,3 @@
 accessing
 contents
-
-	^ entity ifNil: [ nil ] ifNotNil: [ entity contents ]
+	^ entity isNil ifTrue: [ nil ] ifFalse: [ entity contents ]

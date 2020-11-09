@@ -1,3 +1,4 @@
 testing
 closed
+	
 	^ stream closed

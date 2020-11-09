@@ -1,5 +1,4 @@
 accessing
 contentLength
-
-	contentLength ifNil: [ self computeContentLength ].
+	contentLength isNil ifTrue: [ self computeContentLength ].
 	^ contentLength

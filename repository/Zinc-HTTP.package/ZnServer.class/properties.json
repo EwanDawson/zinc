@@ -10,8 +10,7 @@
 	],
 	"instvars" : [
 		"options",
-		"sessionManager",
-		"newOptions"
+		"sessionManager"
 	],
 	"name" : "ZnServer",
 	"type" : "normal"

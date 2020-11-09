@@ -1,5 +1,4 @@
 enumerating
 partsDo: block
-
-	parts ifNil: [ ^ self ].
-	parts do: block
+	parts isNil ifTrue: [ ^ self ].
+	parts do: block  

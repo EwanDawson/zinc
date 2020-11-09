@@ -1,6 +1,6 @@
 instance creation
 defaultRequestHeaders
 	^ self new
-		at: 'User-Agent' put: (ZnCurrentOptions at: #userAgentString);
+		at: 'User-Agent' put: ZnConstants defaultUserAgent;
 		at: 'Accept' put: '*/*';
 		yourself
