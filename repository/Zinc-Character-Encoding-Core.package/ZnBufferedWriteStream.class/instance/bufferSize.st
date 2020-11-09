@@ -1,4 +1,5 @@
 accessing
 bufferSize
-
-	^ buffer ifNil: [ self defaultBufferSize ] ifNotNil: [ buffer size ]
+	^ buffer isNil 
+		ifTrue: [ self defaultBufferSize ]
+		ifFalse: [ buffer size ]

@@ -1,5 +1,4 @@
 private
 computeRepresentation
-	representation := ByteArray streamContents: [ :stream | 
-		self writeRepresentationOn: (ZnBivalentWriteStream on: stream) ].
+	representation := String streamContents: [ :stream | self writeRepresentationOn: stream ].
 	contentLength := representation size

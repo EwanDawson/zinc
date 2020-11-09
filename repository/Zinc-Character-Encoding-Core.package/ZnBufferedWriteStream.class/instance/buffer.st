@@ -1,5 +1,5 @@
 private
 buffer
-
-	buffer ifNil: [ self sizeBuffer: self defaultBufferSize ].
+	buffer isNil 
+		ifTrue: [ self sizeBuffer: self defaultBufferSize ].
 	^ buffer

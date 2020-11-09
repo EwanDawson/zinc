@@ -1,3 +1,3 @@
-private
+initialization
 reset
 	position := 0

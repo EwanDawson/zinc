@@ -1,5 +1,4 @@
 accessing
 parameters
-
-	parameters ifNil: [ parameters := SmallDictionary new ].
+	parameters isNil ifTrue: [ parameters := SmallDictionary new ].
 	^ parameters

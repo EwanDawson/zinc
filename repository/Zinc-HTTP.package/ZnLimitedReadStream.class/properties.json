@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "Stream",
 	"category" : "Zinc-HTTP-Streaming",
 	"classinstvars" : [ ],
 	"pools" : [ ],
